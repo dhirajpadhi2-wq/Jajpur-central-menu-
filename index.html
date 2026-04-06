@@ -19,15 +19,22 @@ scroll-behavior:smooth;
 }
 
 body{
-background:linear-gradient(135deg,#0f0f0f,#1c1c1c);
+background: 
+linear-gradient(135deg,#0f0f0f,#1c1c1c),
+url('https://www.transparenttextures.com/patterns/asfalt-light.png');
 color:white;
+background-blend-mode: overlay;
 }
 
 /* HEADER */
 header{
 text-align:center;
 padding:25px;
-background:rgba(0,0,0,0.8);
+background:
+linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092');
+background-size:cover;
+background-position:center;
 position:sticky;
 top:0;
 z-index:1000;
@@ -67,10 +74,15 @@ border:none;
 
 /* CATEGORY */
 .category{
-margin:30px;
+margin-top:40px;
 padding:20px;
 border-radius:15px;
 background:rgba(255,255,255,0.05);
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,0.1);
+box-shadow:0 0 25px rgba(0,0,0,0.6);
+position:relative;
+overflow:hidden;
 }
 .category h2{
 color:#ffcc00;
