@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Jajpur Central | Menu</title>
+<title>Jajpur Central 2.0 | Menu</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
@@ -20,29 +19,43 @@ scroll-behavior:smooth;
 }
 
 body{
-background:linear-gradient(135deg,#111,#1c1c1c);
+background:linear-gradient(135deg,#0f0f0f,#1c1c1c);
 color:white;
 }
 
 /* HEADER */
-
 header{
 text-align:center;
 padding:25px;
 background:rgba(0,0,0,0.8);
-backdrop-filter:blur(10px);
 position:sticky;
 top:0;
 z-index:1000;
 }
-
 header h1{
-color:#00d4ff;
+color:#ffcc00;
 font-size:34px;
 }
 
-/* SEARCH */
+/* NAVBAR */
+.navbar{
+display:flex;
+overflow-x:auto;
+gap:10px;
+padding:10px;
+background:#000;
+position:sticky;
+top:90px;
+}
+.navbar a{
+color:white;
+text-decoration:none;
+padding:8px 15px;
+background:#1a1a1a;
+border-radius:20px;
+}
 
+/* SEARCH */
 #search{
 width:90%;
 margin:15px auto;
@@ -50,23 +63,21 @@ display:block;
 padding:12px;
 border-radius:10px;
 border:none;
-outline:none;
 }
 
 /* CATEGORY */
-
 .category{
 margin:30px;
 padding:20px;
-background:#1a1a1a;
 border-radius:15px;
+background:rgba(255,255,255,0.05);
 }
-
 .category h2{
-color:#00d4ff;
+color:#ffcc00;
 margin-bottom:10px;
 }
 
+/* ITEM */
 .item{
 display:flex;
 justify-content:space-between;
@@ -75,48 +86,152 @@ border-bottom:1px solid #333;
 }
 
 /* BUTTON */
-
 .btn{
 display:block;
 text-align:center;
-margin:20px auto;
+margin:15px;
 padding:15px;
-width:85%;
-background:#00d4ff;
+background:#ffcc00;
 color:black;
-text-decoration:none;
 border-radius:10px;
-font-weight:bold;
+text-decoration:none;
 }
 
-/* FOOTER */
-
-footer{
-text-align:center;
-padding:20px;
-background:#000;
+/* FLOAT */
+.float{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px;
+border-radius:50%;
 }
 
 </style>
-
 </head>
 
 <body>
 
 <header>
-<h1>Jajpur Central</h1>
-<p>Delicious Food | Odisha</p>
+<h1>Jajpur Central 2.0</h1>
+<p>Lunch & Dinner</p>
 </header>
 
-<input type="text" id="search" placeholder="Search food...">
+<div class="navbar">
+<a href="#rice">Rice</a>
+<a href="#dal">Dal</a>
+<a href="#bread">Bread</a>
+<a href="#veg">Veg</a>
+<a href="#nonveg">Non-Veg</a>
+<a href="#biryani">Biryani</a>
+<a href="#starter">Starters</a>
+<a href="#chinese">Chinese</a>
+<a href="#soup">Soup</a>
+</div>
+
+<input type="text" id="search" placeholder="🔍 Search food...">
 
 <section>
 
-<div class="category">
-<h2>🔥 Popular Items</h2>
-<div class="item"><span>Chicken Biryani</span><span>₹120</span></div>
-<div class="item"><span>Paneer Butter Masala</span><span>₹130</span></div>
-<div class="item"><span>Egg Roll</span><span>₹50</span></div>
+<!-- RICE -->
+<div class="category" id="rice">
+<h2>🍚 Rice</h2>
+<div class="item"><span>Plain Rice</span><span>₹50</span></div>
+<div class="item"><span>Jeera Rice</span><span>₹80</span></div>
+<div class="item"><span>Ghee Rice</span><span>₹80</span></div>
+<div class="item"><span>Lemon Rice</span><span>₹80</span></div>
+<div class="item"><span>Veg Fried Rice</span><span>₹80</span></div>
+<div class="item"><span>Mix Veg Fried Rice</span><span>₹120</span></div>
+<div class="item"><span>Non Veg Fried Rice</span><span>₹140</span></div>
+<div class="item"><span>Schezwan Fried Rice</span><span>₹120</span></div>
+</div>
+
+<!-- DAL -->
+<div class="category" id="dal">
+<h2>🥣 Dal</h2>
+<div class="item"><span>Plain Dal</span><span>₹40</span></div>
+<div class="item"><span>Dal Fry</span><span>₹60</span></div>
+<div class="item"><span>Dal Tadka</span><span>₹60</span></div>
+<div class="item"><span>Egg Dal Tadka</span><span>₹80</span></div>
+<div class="item"><span>Paneer Tadka</span><span>₹80</span></div>
+</div>
+
+<!-- BREAD -->
+<div class="category" id="bread">
+<h2>🥖 Bread</h2>
+<div class="item"><span>Butter Naan</span><span>₹35</span></div>
+<div class="item"><span>Plain Naan</span><span>₹30</span></div>
+<div class="item"><span>Folding Naan</span><span>₹40</span></div>
+<div class="item"><span>Tandoori Roti</span><span>₹25</span></div>
+<div class="item"><span>Masala Kulcha</span><span>₹50</span></div>
+<div class="item"><span>Paneer Kulcha</span><span>₹60</span></div>
+<div class="item"><span>Garlic Naan</span><span>₹50</span></div>
+<div class="item"><span>Plain Paratha</span><span>₹25</span></div>
+<div class="item"><span>Lachha Paratha</span><span>₹25</span></div>
+<div class="item"><span>Paneer Paratha</span><span>₹40</span></div>
+</div>
+
+<!-- VEG -->
+<div class="category" id="veg">
+<h2>🥗 Veg</h2>
+<div class="item"><span>Mix Veg</span><span>₹140</span></div>
+<div class="item"><span>Veg Navratan</span><span>₹160</span></div>
+<div class="item"><span>Mushroom Masala</span><span>₹140</span></div>
+<div class="item"><span>Paneer Butter Masala</span><span>₹150</span></div>
+<div class="item"><span>Paneer Kadai</span><span>₹150</span></div>
+<div class="item"><span>Paneer Punjabi</span><span>₹150</span></div>
+<div class="item"><span>Veg Kolhapuri</span><span>₹150</span></div>
+</div>
+
+<!-- NON VEG -->
+<div class="category" id="nonveg">
+<h2>🍗 Non-Veg</h2>
+<div class="item"><span>Chicken Butter Masala</span><span>₹170</span></div>
+<div class="item"><span>Kadai Chicken</span><span>₹140</span></div>
+<div class="item"><span>Chicken Dopiaza</span><span>₹150</span></div>
+<div class="item"><span>Chicken Hyderabadi</span><span>₹170</span></div>
+<div class="item"><span>Chicken Mughlai</span><span>₹170</span></div>
+<div class="item"><span>Chicken Punjabi</span><span>₹190</span></div>
+<div class="item"><span>Chicken Masala</span><span>₹140</span></div>
+<div class="item"><span>Chicken Kasa</span><span>₹140</span></div>
+</div>
+
+<!-- BIRYANI -->
+<div class="category" id="biryani">
+<h2>🍛 Biryani</h2>
+<div class="item"><span>Chicken Biryani</span><span>₹130</span></div>
+<div class="item"><span>Chicken Dum Biryani</span><span>₹150</span></div>
+<div class="item"><span>Special Chicken Biryani</span><span>₹180</span></div>
+<div class="item"><span>Mutton Biryani</span><span>₹240</span></div>
+<div class="item"><span>Prawn Biryani</span><span>₹220</span></div>
+</div>
+
+<!-- STARTER -->
+<div class="category" id="starter">
+<h2>🔥 Starters</h2>
+<div class="item"><span>Chicken 65</span><span>₹120</span></div>
+<div class="item"><span>Chilli Chicken</span><span>₹120</span></div>
+<div class="item"><span>Chicken Lollipop</span><span>₹170</span></div>
+<div class="item"><span>Paneer 65</span><span>₹120</span></div>
+<div class="item"><span>Chilli Paneer</span><span>₹130</span></div>
+</div>
+
+<!-- SOUP -->
+<div class="category" id="soup">
+<h2>🍲 Soup</h2>
+<div class="item"><span>Veg Manchow Soup</span><span>₹70</span></div>
+<div class="item"><span>Chicken Manchow Soup</span><span>₹90</span></div>
+<div class="item"><span>Hot & Sour Soup</span><span>₹90</span></div>
+</div>
+
+<!-- CHINESE -->
+<div class="category" id="chinese">
+<h2>🍜 Chinese</h2>
+<div class="item"><span>Chicken Noodles</span><span>₹130</span></div>
+<div class="item"><span>Veg Noodles</span><span>₹100</span></div>
+<div class="item"><span>Egg Noodles</span><span>₹110</span></div>
+<div class="item"><span>Chicken Fried Rice</span><span>₹130</span></div>
 </div>
 
 </section>
@@ -124,21 +239,13 @@ background:#000;
 <a class="btn" href="https://wa.me/919040301154">Order on WhatsApp</a>
 <a class="btn" href="tel:9040301154">Call Now</a>
 
-<footer>
-<p>© 2026 Jajpur Central</p>
-</footer>
+<a href="https://wa.me/919040301154" class="float">💬</a>
 
 <script>
 document.getElementById("search").addEventListener("keyup", function(){
 let value=this.value.toLowerCase();
-let items=document.querySelectorAll(".item");
-
-items.forEach(function(item){
-if(item.innerText.toLowerCase().includes(value)){
-item.style.display="flex";
-}else{
-item.style.display="none";
-}
+document.querySelectorAll(".item").forEach(item=>{
+item.style.display=item.innerText.toLowerCase().includes(value)?"flex":"none";
 });
 });
 </script>
