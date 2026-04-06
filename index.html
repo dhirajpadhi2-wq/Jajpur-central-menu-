@@ -88,7 +88,22 @@ overflow:hidden;
 color:#ffcc00;
 margin-bottom:10px;
 }
+.category::before{
+content:'';
+position:absolute;
+width:150%;
+height:150%;
+background:radial-gradient(circle, rgba(255,204,0,0.15), transparent);
+top:-50%;
+left:-50%;
+animation:rotate 10s linear infinite;
+}
 
+@keyframes rotate{
+0%{transform:rotate(0deg);}
+100%{transform:rotate(360deg);}
+}
+  
 /* ITEM */
 .item{
 display:flex;
@@ -96,7 +111,14 @@ justify-content:space-between;
 padding:10px;
 border-bottom:1px solid #333;
 }
-
+.item:hover{
+background:#ffcc00;
+color:black;
+transform:scale(1.02);
+box-shadow:0 0 10px #ffcc00;
+transition:0.3s;
+}
+  
 /* BUTTON */
 .btn{
 display:block;
@@ -107,8 +129,13 @@ background:#ffcc00;
 color:black;
 border-radius:10px;
 text-decoration:none;
+box-shadow:0 0 15px #ffcc00;
+transition:0.3s;
 }
-
+.btn:hover{
+transform:scale(1.05);
+}
+  
 /* FLOAT */
 .float{
 position:fixed;
@@ -118,8 +145,30 @@ background:#25D366;
 color:white;
 padding:15px;
 border-radius:50%;
+box-shadow:0 0 15px #25D366, 0 0 30px rgba(37,211,102,0.5);
+animation:pulse 2s infinite;
+}
+  @keyframes pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.1);}
+100%{transform:scale(1);}
+  }
+  
+.category{
+animation:fadeUp 0.8s ease;
 }
 
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+  
 </style>
 </head>
 
